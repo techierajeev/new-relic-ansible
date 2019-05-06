@@ -1,0 +1,10 @@
+- hosts: passthehostname
+  roles:
+    - name: newrelic-role
+      vars:
+        nrinfragent_os_name: EL
+        nrinfragent_os_version: 7
+        nrinfragent_config:
+          license_key: YOUR_LICENSE_KEY
+          log_file: /var/log/newrelic/nr-infra.log
+          log_to_stdout: false
